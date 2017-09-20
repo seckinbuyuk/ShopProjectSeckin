@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="defaultTemplate" template="/WEB-INF/template/default/template.jsp">
+        <put-attribute name="top" value="/WEB-INF/template/default/top.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp" />
+        <put-attribute name="bottom" value="/WEB-INF/template/default/footer.jsp" />
+        <put-attribute name="left_content" value="/WEB-INF/template/default/leftcontent.jsp" />
+    </definition>
+    
+    
+    <definition name="defaultTemplate2" template="/WEB-INF/template/default/template.jsp">
+        <put-attribute name="top" value="/WEB-INF/template/default/top.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/template/default/menu.jsp" />
+        <put-attribute name="bottom" value="/WEB-INF/template/default/footer.jsp" />
+        <put-attribute name="left_content" value="/WEB-INF/template/default/leftcontent2.jsp" />
+    </definition>
+  
+  <definition name="home" extends="defaultTemplate">
+		<put-attribute name="right_content" value="/WEB-INF/views/home.jsp" />
+    </definition>
+     <definition name="productList" extends="defaultTemplate">
+		<put-attribute name="right_content" value="/WEB-INF/views/productList.jsp" />
+    </definition>
+    
+     
+    
+    <definition name="productDetails" extends="defaultTemplate2">
+		<put-attribute name="right_content" value="/WEB-INF/views/productDetails.jsp" />
+    </definition>
+    
+    <definition name="shoppingCart" extends="defaultTemplate2">
+		<put-attribute name="right_content" value="/WEB-INF/views/shoppingCart.jsp" />
+    </definition>
+   
+</tiles-definitions>
